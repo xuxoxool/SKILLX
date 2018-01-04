@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Xuxoxool - LAB : SKILLX</title>
+<meta property="og:url"           content="https://xuxoxool.github.io/index.html" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Xuxoxool" />
+<meta property="og:description"   content="Front End Web Developer" />
+<meta property="og:image"         content="images/logo.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/logo.png" />
+<link rel="stylesheet" href="font/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.grid.css">
+<link rel="stylesheet" href="css/bootstrap.table.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="loading pathway">
+	<div class="wrapper">
+		<div class="header">
+			<div class="container">
+				<div class="header-wrapper">
+					<div class="header-menu-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="header-logo">
+						<img src="images/logo.png" />
+					</div>
+					<div class="header-menu">
+						<ul class="menu-main">
+							<li><a href="#install">Installation</a></li>
+							<li><a href="#howtouse">How to use</a></li>
+							<li><a href="#properties">Properties</a></li>
+						</ul>
+						
+						<ul class="menu-contact">
+							<li><a href="https://xuxoxool.github.io" target="_blank"><i class="fa fa-github"></i><span>Github Page</span></a></li>
+							<li><i class="fa fa-phone"></i><span>(+60)194767618</span></li>
+							<li><i class="fa fa-envelope"></i><span>zulzolkaffly@gmail.com</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="container">
+				<div class="top-bar">
+					<div class="top-bar-left">SKILLX.</div>
+					<div class="top-bar-center"><span></span></div>
+					<div class="top-bar-right">
+						<span>A jQuery plugin to chart skill set</span>
+						<a href="https://github.com/xuxoxool/SKILLX" target="_blank" class="github">
+							<i class="fa fa-github"></i>
+							<strong>View Repo on Github</strong>
+						</a>
+					</div>
+				</div>
+				
+				<div class="content-section">
+					<div class="row">
+						<div class="col-sm-6 col-sm-push-6 sample">
+							<h1>Sample</h1>
+							
+							<div class="skillx-container" id="skills_1">
+								<button type="button" class="rerun" onclick="return redraw('#skills_1');">Rerun</button>
+							</div>
+							<div class="skillx-container" id="skills_2">
+								<button type="button" class="rerun" onclick="return redraw('#skills_2');">Rerun</button>
+							</div>
+							<div class="skillx-container" id="skills_3">
+								<button type="button" class="rerun" onclick="return redraw('#skills_3');">Rerun</button>
+							</div>
+						</div>
+						
+						<div class="col-sm-6 col-sm-pull-6">
+							<p>
+								<strong>SKILLX</strong> is a jquery plugin, where you can display a set of skills in a visual representation.
+							</p>
+							<p>
+								The set of skills will be parsed and plotted into a rotary chart, with each hand of the chart corresponds to the value
+								of the skill.
+							</p>
+							
+							<div class="code" id="install">
+								<h3>Installation</h3>
+								<p>Download / fork the package from <a href="https://github.com/xuxoxool/SKILLX" target="_blank">here</a></p>
+								<p>Just attach the source JS file. Make sure to put it under jQuery.</p>
+								<code>
+									<span>&lt;script src=&quot;path/to/skillx/js/jquery.js&quot;&gt;&lt;/script&gt;</span>
+									<span>&lt;script src=&quot;path/to/skillx/js/skillx.min.js&quot;&gt;&lt;/script&gt;</span>
+								</code>
+							</div>
+							
+							<div class="code" id="howtouse">
+								<h3>How To Use</h3>
+								<p>Attach the plugin to an element, the element should be a <u>blocked</u> element. You must also specify the element <u>height</u></p>
+								<code>
+									<span>$('#skills_1').skillx({</span>
+									<span class="ind-1">'maxPoints' : 5,</span>
+									<span class="ind-1">'showValueAs' : 'percentage',</span>
+									<span class="ind-1">'flatEdge' : true,</span>
+									<span class="ind-1">'sort' : {</span>
+									<span class="ind-2">'enable' : true,</span>
+									<span class="ind-2">'column' : 'name',</span>
+									<span class="ind-2">'order' : 'asc'</span>
+									<span class="ind-1">},</span>
+									<span class="ind-1">'items' : [</span>
+									<span class="ind-2">{ 'name' : 'PHP', 'value' : 4 },</span>
+									<span class="ind-2">{ 'name' : 'Java', 'value' : 2 },</span>
+									<span class="ind-2">{ 'name' : 'Dot Net', 'value' : 2 },</span>
+									<span class="ind-2">{ 'name' : 'HTML', 'value' : 5 },</span>
+									<span class="ind-2">{ 'name' : 'jQuery', 'value' : 5 },</span>
+									<span class="ind-2">{ 'name' : 'CSS', 'value' : 5 },</span>
+									<span class="ind-2">{ 'name' : 'Bootstrap', 'value' : 3 },</span>
+									<span class="ind-2">{ 'name' : 'SASS/LESS', 'value' : 1 },</span>
+									<span class="ind-2">{ 'name' : 'Angular', 'value' : 1 },</span>
+									<span class="ind-2">{ 'name' : 'React', 'value' : 1 },</span>
+									<span class="ind-2">{ 'name' : 'Xuxo', 'value' : 5 },</span>
+									<span class="ind-2">{ 'name' : 'Code Igniter', 'value' : 4 },</span>
+									<span class="ind-2">{ 'name' : 'Zend', 'value' : 3 },</span>
+									<span class="ind-2">{ 'name' : 'Wordpress', 'value' : 3 },</span>
+									<span class="ind-2">{ 'name' : 'Laravel', 'value' : 1 },</span>
+									<span class="ind-2">{ 'name' : 'Malay', 'value' : 5 },</span>
+									<span class="ind-2">{ 'name' : 'English', 'value' : 4 }</span>
+									<span class="ind-1">],</span>
+									<span class="ind-1">'onItemClick' : function(a) {</span>
+									<span class="ind-2">alert(a.name + ' : ' + a.value);</span>
+									<span class="ind-1">}</span>
+									<span>});</span>
+
+								</code>
+							</div>
+							
+							<div id="properties">
+								<h3>Properties</h3>
+								
+								<table class="table table-responsive">
+									<thead>
+										<tr>
+											<th>Property</th>
+											<th>Description</th>
+											<th>Values</th>
+											<th>Default</th>
+										</tr>
+									</thead>
+									
+									<tbody>
+										<tr>
+											<td><strong>'maxPoints'</strong></td>
+											<td>Maximum points in the skill set</td>
+											<td>Integer number starting from 1</td>
+											<td>5</td>
+										</tr>
+										<tr>
+											<td><strong>'showValueAs'</strong></td>
+											<td>To show value as <i>percentage</i> or <i>number</i></td>
+											<td>'percentage', 'number'</td>
+											<td>'percentage'</td>
+										</tr>
+										<tr>
+											<td><strong>'flatEdge'</strong></td>
+											<td>To show the edge of each skill item as <i>flat</i> or <i>sharp</i></td>
+											<td>true, false</td>
+											<td>false</td>
+										</tr>
+										<tr>
+											<td><strong>'sort'</strong></td>
+											<td colspan="3">
+												<span>Sorting options for skill set items</span>
+												<div class="code">
+													<code>
+														<span>{</span>
+														<span class="ind-1">'enable' : [true/false]</span>
+														<span class="ind-1">'column' : <i>Column name such as 'value' / 'name' / or any specified (e.g: 'id', 'date')</i></span>
+														<span class="ind-1">'order' : ['asc'/'desc']</span>
+														<span>}</span>
+													</code>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><strong>'items'</strong></td>
+											<td colspan="3">
+												<span>Skill set items should follow this format:</span>
+												<div class="code">
+													<code>
+														<span>{</span>
+														<span class="ind-1">'name' : 'Item Name'</span>
+														<span class="ind-1"><i>([Required] - Name of the item, string)</i></span>
+														<span class="ind-1">'value' : 3</span>
+														<span class="ind-1"><i>([Required] - Integer value of the item, should not be more than maxPoints)</i></span>
+														<span class="ind-1">'bgColor' : '#FF0000'</span>
+														<span class="ind-1"><i>([Optional] - Hex code for the color of the item background)</i></span>
+														<span class="ind-1">'textColor' : '#222222'</span>
+														<span class="ind-1"><i>([Optional] - Hex code for the color of the item text)</i></span>
+														<span class="ind-1">'class' : 'foo bar'</span>
+														<span class="ind-1"><i>([Optional] - Additional class for each item, separated by a space)</i></span>
+														<span class="ind-1">'attr' : {</span>
+														<span class="ind-2">'attrName' : 'attrValue',</span>
+														<span class="ind-2">'attrName' : 'attrValue',</span>
+														<span class="ind-1">}</span>
+														<span class="ind-1"><i>([Optional] Additional attributes to be passed into each item)</i></span>
+														<span class="ind-1">'data' : {</span>
+														<span class="ind-2">'dataKey' : 'dataValue',</span>
+														<span class="ind-2">'dataKey' : 'dataValue',</span>
+														<span class="ind-1">}</span>
+														<span class="ind-1"><i>([Optional] Additional data to be passed into each item)</i></span>
+														<span>}</span>
+													</code>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+														
+								<div class="code">
+									<h3>Example Property</h3>
+									<p>In this example, the items will be sorted ascending by 'id' column, with sharp edge, and value shown as percentage
+									(See sample no 3)</p>
+									<code>
+										<span>$('#skills_3').skillx({</span>
+										<span class="ind-1">'maxPoints' : 5,</span>
+										<span class="ind-1">'showValueAs' : 'percentage',</span>
+										<span class="ind-1">'flatEdge' : false,</span>
+										<span class="ind-1">'sort' : {</span>
+										<span class="ind-2">'enable' : true,</span>
+										<span class="ind-2">'column' : 'id',</span>
+										<span class="ind-2">'order' : 'asc'</span>
+										<span class="ind-1">},</span>
+										<span class="ind-1">'items' : [</span>
+										<span class="ind-2">{ 'name' : 'January', 'value' : 4, 'bgColor' : '#FF0000', 'textColor' : '#222222', 'id' : 1 },</span>
+										<span class="ind-2">{ 'name' : 'February', 'value' : 2, 'id' : 2 },</span>
+										<span class="ind-2">{ 'name' : 'March', 'value' : 2, 'id' : 3 },</span>
+										<span class="ind-2">{ 'name' : 'April', 'value' : 5, 'id' : 4 },</span>
+										<span class="ind-2">{ 'name' : 'May', 'value' : 5, 'id' : 5 },</span>
+										<span class="ind-2">{ 'name' : 'June', 'value' : 5, 'id' : 6 },</span>
+										<span class="ind-2">{ 'name' : 'July', 'value' : 3, 'id' : 7 },</span>
+										<span class="ind-2">{ 'name' : 'August', 'value' : 1, 'id' : 8 },</span>
+										<span class="ind-2">{ 'name' : 'September', 'value' : 1, 'id' : 9 },</span>
+										<span class="ind-2">{ 'name' : 'October', 'value' : 1, 'id' : 10 },</span>
+										<span class="ind-2">{ 'name' : 'November', 'value' : 5, 'id' : 11 },</span>
+										<span class="ind-2">{ 'name' : 'December', 'value' : 4, 'id' : 12 }</span>
+										<span class="ind-1">],</span>
+										<span class="ind-1">'onItemClick' : function(a) {</span>
+										<span class="ind-2">alert(a.name + ' : ' + a.value);</span>
+										<span class="ind-1">}</span>
+										<span>});</span>
+									</code>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="bottom-bar">
+					<h1>Contact Me:</h1>
+					
+					<ul>
+						<li><i class="fa fa-phone"></i>&nbsp;&nbsp;+60194767618</li>
+						<li><i class="fa fa-envelope"></i>&nbsp;&nbsp;zulzolkaffly@gmail.com</li>
+						<li><i class="fa fa-github"></i>&nbsp;&nbsp;https://xuxoxool.github.io</li>
+					</ul>
+					
+					<a href="https://www.facebook.com/zulzolkaffly" target="_blank" class="social facebook">
+						<i class="fa fa-facebook"></i>
+						<strong>@ZulZolkaffly</strong>
+					</a>
+					
+					<a href="https://www.instagram.com/zulzolkaffly" target="_blank" class="social instagram">
+						<i class="fa fa-instagram"></i>
+						<strong>@ZulZolkaffly</strong>
+					</a>
+					
+					<a href="https://github.com/xuxoxool/SKILLX" target="_blank" class="social github">
+						<i class="fa fa-github"></i>
+						<strong>Github Page</strong>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	<script src="https://use.fontawesome.com/6395f6b3f7.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+					integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+					crossorigin="anonymous"></script>
+	-->
+	<script src="js/jquery-1.12.js"></script>
+	<script src="js/skillx.js"></script>
+	<script type="text/javascript">
+	var tablex = null;
+	$(function() {
+		setTimeout(function() {
+			var hash = window.location.hash;
+			if($.trim(hash.replace('#','')) !== "") {
+				var $element = $(hash).eq(0);
+				if($element.length) {
+					var elementTop = $element.offset().top - 100;
+					$('.wrapper').animate({
+						scrollTop : elementTop
+					},250);
+				}
+			}
+			
+			$('body').removeClass('loading');		
+		}, 1000);
+		
+		// INITIALIZE SKILLX
+		$('#skills_1').skillx({
+			'maxPoints' : 5,
+			'showValueAs' : 'percentage',
+			'flatEdge' : true,
+			'items' : [
+				{ 'name' : 'PHP', 'value' : 4 },
+				{ 'name' : 'Java', 'value' : 2 },
+				{ 'name' : 'Dot Net', 'value' : 2 },
+				{ 'name' : 'HTML', 'value' : 5 },
+				{ 'name' : 'jQuery', 'value' : 5 },
+				{ 'name' : 'CSS', 'value' : 5 },
+				{ 'name' : 'Bootstrap', 'value' : 3 },
+				{ 'name' : 'SASS/LESS', 'value' : 1 },
+				{ 'name' : 'Angular', 'value' : 1 },
+				{ 'name' : 'React', 'value' : 1 },
+				{ 'name' : 'Xuxo', 'value' : 5 },
+				{ 'name' : 'Code Igniter', 'value' : 4 },
+				{ 'name' : 'Zend', 'value' : 3 },
+				{ 'name' : 'Wordpress', 'value' : 3 },
+				{ 'name' : 'Laravel', 'value' : 1 },
+				{ 'name' : 'Malay', 'value' : 5 },
+				{ 'name' : 'English', 'value' : 4 }
+			],
+			'onItemClick' : function(a) {
+				alert(a.name + ' : ' + a.value);
+			}
+		});
+			
+		$('#skills_2').skillx({
+			'maxPoints' : 100,
+			'items' : [
+				{ 'name' : 'Friendliness', 'value' : 90 },
+				{ 'name' : 'Knowledgable', 'value' : 70 },
+				{ 'name' : 'Hardworking', 'value' : 80 }
+			],
+			'onItemClick' : function(a) {
+				alert(a.name + ' : ' + a.value);
+			}
+		});
+			
+		$('#skills_3').skillx({
+			'maxPoints' : 20,
+			'sort' : {
+				'column' : 'id',
+				'order' : 'asc'
+			},
+			'items' : [
+				{ 'name' : 'JANUARY', 'value' : 20, 'bgColor' : '#FF0000', 'textColor' : '#222222', 'id' : 1 },
+				{ 'name' : 'FEBRUARY', 'value' : 20, 'id' : 2 },
+				{ 'name' : 'MARCH', 'value' : 15, 'id' : 3 },
+				{ 'name' : 'APRIL', 'value' : 10, 'id' : 4 },
+				{ 'name' : 'MAY', 'value' : 15, 'id' : 5 },
+				{ 'name' : 'JUNE', 'value' : 5, 'id' : 6 },
+				{ 'name' : 'JULY', 'value' : 5, 'id' : 7 },
+				{ 'name' : 'AUGUST', 'value' : 10, 'id' : 8 },
+				{ 'name' : 'SEPTEMBER', 'value' : 20, 'id' : 9 },
+				{ 'name' : 'OCTOBER', 'value' : 20, 'id' : 10 },
+				{ 'name' : 'NOVEMBER', 'value' : 15, 'id' : 11 },
+				{ 'name' : 'DECEMBER', 'value' : 10, 'id' : 12 }
+			],
+			'onItemClick' : function(a) {
+				alert(a.name + ' : ' + a.value);
+			}
+		});
+		
+		// MENU
+		$('.header-menu-toggle').off('click').on('click',function() {
+			$('.header-menu-toggle, .header-menu').toggleClass('in');
+		});
+			
+		$('.header-menu ul li a').on('click',function() {
+			console.log('here');
+			$('.header-menu-toggle, .header-menu').removeClass('in');
+		});
+	});
+	
+	function redraw(id) {
+		if($(id).length) $(id).skillx('redraw');
+	}
+	</script>
+</body>
+
+</html>
+
